@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BsTrack</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="maptiler_style_url">https://api.maptiler.com/maps/streets-v2-light/style.json?key=shkhjV0blbHnjBaFvn14</string>
+    <string name="maptiler_api_key">shkhjV0blbHnjBaFvn14</string>
+    <string name="profile">Ranjit Patil\n</string>
+    <string name="Status">3 Days Left</string>
+    <string name="about">About</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="describe">Describe</string>
+    <string name="deatails">Deatails</string>
+
+</resources>

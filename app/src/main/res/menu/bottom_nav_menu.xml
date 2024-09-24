@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/bus_pass"
+        android:icon="@drawable/transit_ticket_24px"
+        android:title="Bus Pass" />
+
+    <item
+        android:id="@+id/locate_bus"
+        android:icon="@drawable/ic_my_location"
+        android:title="Locate Bus" />
+
+    <item
+        android:id="@+id/user_complaints"
+        android:icon="@drawable/feedback_24px"
+        android:title="Complaint" />
+
+</menu>
