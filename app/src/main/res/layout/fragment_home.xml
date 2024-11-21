@@ -6,8 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.LocateBus">
 
-
-
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
         android:layout_width="match_parent"
@@ -15,22 +13,27 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/my_loc_button"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        app:backgroundTint="#ffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="110dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="16dp"
+        app:tint="#000"
         app:srcCompat="@drawable/ic_my_location"
         android:contentDescription="TODO" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
        android:id="@+id/bus_loc_button"
-        style="?attr/floatingActionButtonSmallStyle"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
+        app:backgroundTint="#ffff"
+        app:tint="#000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="185dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="110dp"
         app:srcCompat="@drawable/ic_directions_bus"
         android:contentDescription="TODO" />
 

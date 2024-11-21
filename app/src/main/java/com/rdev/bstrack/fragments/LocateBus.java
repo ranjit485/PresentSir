@@ -1,12 +1,6 @@
 package com.rdev.bstrack.fragments;
 
-import android.Manifest;
 import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +9,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -29,7 +22,6 @@ import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.maps.Style;
 import com.rdev.bstrack.R;
-import com.rdev.bstrack.service.LocationService;
 
 public class LocateBus extends Fragment {
 
@@ -75,45 +67,16 @@ public class LocateBus extends Fragment {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
                         // Start the location service
-                        checkPermissionsAndStartLocationUpdates();
                     }
                 });
             }
         });
 
         // Register location receiver
-        registerLocationReceiver();
 
         return view;
     }
 
-    private void checkPermissionsAndStartLocationUpdates() {
-        if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // Request permissions if not granted
-            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_LOCATION);
-            return;
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_BACKGROUND_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // Request background location permission if not granted
-                ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_BACKGROUND_LOCATION}, PERMISSION_REQUEST_LOCATION);
-                return;
-            }
-        }
-
-        startLocationUpdates();
-    }
-
-    private void startLocationUpdates() {
-        Intent serviceIntent = new Intent(requireContext(), LocationService.class);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            requireContext().startForegroundService(serviceIntent);
-        } else {
-            requireContext().startService(serviceIntent);
-        }
-    }
 
     private void updateMapWithLocation(LatLng userLocation, boolean isCameraButton) {
         if (mapboxMap == null) return;
@@ -179,18 +142,6 @@ public class LocateBus extends Fragment {
         Toast.makeText(requireContext(), "Bus is " + distance + " meters away", Toast.LENGTH_LONG).show();
     }
 
-    private void registerLocationReceiver() {
-        locationReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                userLatitude = intent.getDoubleExtra("latitude", 0);
-                userLongitude = intent.getDoubleExtra("longitude", 0);
-                updateMapWithLocation(new LatLng(userLatitude, userLongitude), false);
-            }
-        };
-
-        requireContext().registerReceiver(locationReceiver, new IntentFilter("LocationUpdate"));
-    }
 
     @Override
     public void onDestroy() {

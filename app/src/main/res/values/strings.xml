@@ -7,9 +7,20 @@
     <string name="profile">Ranjit Patil\n</string>
     <string name="Status">3 Days Left</string>
     <string name="about">About</string>
-    <string name="username">Username</string>
+    <string name="username">Email</string>
     <string name="password">Password</string>
     <string name="describe">Describe</string>
-    <string name="deatails">Deatails</string>
+    <string name="deatails">Details</string>
 
+    <string name="aboutUsDetail">Welcome to PresentSir, a community-driven bus tracking app designed to make your daily commute easier and more reliable. With PresentSir, users collaborate to provide real-time bus location updates, ensuring everyone has access to accurate and timely information.</string>
+    <string name="sectionTwoDetails">We understand the daily challenges faced by commuters, including long waits and uncertainty about bus locations. To address these problems, PresentSir empowers users to share bus location updates, helping others locate buses quickly and efficiently.</string>
+    <string name="sectionThreeDetails">We are committed to protecting your privacy and data. Here\'s how we handle your information:</string>
+
+    <string name="Authentication">&#9679;<b> Authentication :</b> We collect your email and password to create a secure account. Passwords are encrypted and not visible to administrators.</string>
+    <string name="PasswordRecovery">&#9679;<b> Password Recovery :</b> We use your mobile number to help you reset your password if needed.</string>
+    <string name="UserInsights">&#9679;<b> User Insights :</b> Gender information is collected to better understand and address user-specific challenges, such as privacy concerns.</string>
+    <string name="LocationData">&#9679;<b> Location Data :</b> Your location is not stored in our database, and the app does not work in the background, ensuring your privacy.</string>
+    <string name="DataSharing">&#9679;<b> Data Sharing :</b> Your personal data is never shared publicly or with third parties.</string>
+    <string name="WhoWeAre">PresentSir is an independent initiative developed by <b>Ranjit.</b> This app is not affiliated with any college or institution. Our goal is to create a dependable platform that enhances the commuting experience for everyone.</string>
+    <string name="NeedHelp">If you have any questions, feedback, or suggestions, feel free to reach out to us at 7499491002. We’re here to help! Together, let’s make bus commuting smarter and more reliable!</string>
 </resources>

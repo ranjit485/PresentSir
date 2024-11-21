@@ -20,11 +20,12 @@
                 android:id="@+id/complaint_no"
                 android:textColor="?attr/colorOnPrimaryContainer"
                 android:textStyle="bold"
-                style="@style/MaterialAlertDialog.Material3.Title.Text"
+                style="@style/TextAppearance.Material3.TitleLarge"
+                android:fontFamily="@font/poppins_medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_centerVertical="true"
                 android:text="1" />
 
             <TextView
@@ -34,6 +35,7 @@
                 android:textColor="?attr/colorOnPrimaryContainer"
                 style="@style/TextAppearance.Material3.TitleLarge"
                 android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_medium"
                 android:layout_toEndOf="@+id/complaint_no"
                 android:layout_marginTop="10dp"
                 android:text="Canteen"/>
@@ -42,7 +44,7 @@
                 android:id="@+id/complaint_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/MaterialAlertDialog.Material3.Body.Text"
+                style="@style/TextAppearance.Material3.BodyMedium"
                 android:layout_marginStart="10dp"
                 android:layout_marginBottom="10dp"
                 android:maxLength="100"

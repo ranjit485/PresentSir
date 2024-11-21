@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="ripple_light">#33000000</color>
+    <color name="ripple_dark">#66FFFFFF</color>
+    <color name="ripple_gradient_orange">#33FF7043</color>
+    <color name="ripple_gradient_yellow">#33FFD54F</color>
+    <color name="ripple_accent">#44FFC107</color>
+
     <color name="md_theme_primary">#AAC7FF</color>
     <color name="md_theme_onPrimary">#0A305F</color>
     <color name="md_theme_primaryContainer">#284777</color>

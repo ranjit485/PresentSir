@@ -18,7 +18,6 @@ public class BusPass extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pass, container, false);
 
-        ShapeableImageView profileImageView = view.findViewById(R.id.profile_image);
 
         return view;
     }
