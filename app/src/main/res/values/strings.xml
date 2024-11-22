@@ -12,6 +12,8 @@
     <string name="describe">Describe</string>
     <string name="deatails">Details</string>
 
+    <string name="ranjit">Made With \u2764 Ranjit</string>
+
     <string name="aboutUsDetail">Welcome to PresentSir, a community-driven bus tracking app designed to make your daily commute easier and more reliable. With PresentSir, users collaborate to provide real-time bus location updates, ensuring everyone has access to accurate and timely information.</string>
     <string name="sectionTwoDetails">We understand the daily challenges faced by commuters, including long waits and uncertainty about bus locations. To address these problems, PresentSir empowers users to share bus location updates, helping others locate buses quickly and efficiently.</string>
     <string name="sectionThreeDetails">We are committed to protecting your privacy and data. Here\'s how we handle your information:</string>

@@ -16,7 +16,7 @@
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:backgroundTint="#ffff"
+            android:backgroundTint="@color/md_theme_surfaceContainerLow"
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways">
 
