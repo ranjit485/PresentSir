@@ -69,25 +69,24 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--        <com.google.android.material.imageview.ShapeableImageView-->
-<!--            android:id="@+id/heart"-->
-<!--            android:layout_width="50dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_gravity="bottom|center"-->
-<!--            android:layout_marginBottom="60dp"-->
-<!--            app:srcCompat="@drawable/heart" />-->
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/shareLocationButton"
             style="@style/Widget.MaterialComponents.FloatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:backgroundTint="#000000"
-            app:elevation="8dp"
-            app:layout_anchor="@id/my_bottom_app_bar"
-            app:iconTint="?attr/colorSecondaryContainer"
-            app:icon="@drawable/emergency_share_24px"
-            app:srcCompat="@drawable/emergency_share_24px" />
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:backgroundTint="@android:color/transparent"
+            android:backgroundTint="#ffff"
+            app:elevation="0dp"
+            app:useCompatPadding="true"
+            app:layout_anchor="@id/my_bottom_app_bar" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/heart"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="67dp"
+            app:srcCompat="@drawable/red_heart" />
 
         <!-- BottomAppBar -->
         <com.google.android.material.bottomappbar.BottomAppBar

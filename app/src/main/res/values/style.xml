@@ -1,2 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources />
+<resources>
+
+    <!-- Custom FloatingActionButton Style -->
+    <style name="CustomFloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <!-- Customize the background color -->
+        <item name="backgroundTint">@android:color/transparent</item>
+
+        <!-- Customize the icon color -->
+        <item name="iconTint">@color/md_theme_error</item>
+
+        <!-- Customize the elevation -->
+        <item name="elevation">0dp</item>
+
+        <!-- Customize the size -->
+        <item name="fabSize">normal</item>
+
+        <!-- Customize the ripple color -->
+        <item name="rippleColor">@color/common_google_signin_btn_text_dark</item>
+
+        <!-- Optional: Customize the shape -->
+        <item name="shapeAppearance">@style/CustomFABShape</item>
+    </style>
+
+    <!-- Custom FAB Shape -->
+    <style name="CustomFABShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>
