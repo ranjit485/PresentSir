@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,7 +25,6 @@ import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.maps.Style;
 import com.rdev.bstrack.R;
-
 public class LocateBus extends Fragment {
 
     private static final int PERMISSION_REQUEST_LOCATION = 1001;
@@ -55,7 +57,10 @@ public class LocateBus extends Fragment {
         busLocationButton = view.findViewById(R.id.bus_loc_button);
 
         // Set click listeners
-        userLocationButton.setOnClickListener(v -> updateMapWithLocation(new LatLng(userLatitude, userLongitude), true));
+        userLocationButton.setOnClickListener(v -> {
+            updateMapWithLocation(new LatLng(userLatitude, userLongitude), true);
+
+        });
         busLocationButton.setOnClickListener(v -> showBusLocation(17.239924, 74.771664));
 
         // Set up the map with MapTiler style
@@ -79,6 +84,8 @@ public class LocateBus extends Fragment {
 
 
     private void updateMapWithLocation(LatLng userLocation, boolean isCameraButton) {
+
+
         if (mapboxMap == null) return;
 
         // Remove the previous marker
@@ -187,4 +194,5 @@ public class LocateBus extends Fragment {
         super.onSaveInstanceState(outState);
         mapView.onSaveInstanceState(outState);
     }
+
 }

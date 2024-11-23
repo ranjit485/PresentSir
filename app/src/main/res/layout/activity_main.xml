@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/root_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -62,10 +63,20 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0" >
+
+            </FrameLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- Floating Action Button -->
+<!--        <com.google.android.material.imageview.ShapeableImageView-->
+<!--            android:id="@+id/heart"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_gravity="bottom|center"-->
+<!--            android:layout_marginBottom="60dp"-->
+<!--            app:srcCompat="@drawable/heart" />-->
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/shareLocationButton"
             style="@style/Widget.MaterialComponents.FloatingActionButton"
@@ -74,7 +85,6 @@
             app:backgroundTint="#000000"
             app:elevation="8dp"
             app:layout_anchor="@id/my_bottom_app_bar"
-            android:textColor="?attr/colorSecondaryContainer"
             app:iconTint="?attr/colorSecondaryContainer"
             app:icon="@drawable/emergency_share_24px"
             app:srcCompat="@drawable/emergency_share_24px" />
